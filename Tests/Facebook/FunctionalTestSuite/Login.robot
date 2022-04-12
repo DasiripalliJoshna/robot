@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-
+${weburl}
 *** Test Cases ***
 Login Screen Test
 
@@ -20,8 +20,19 @@ Admin Login Test
   [Tags]  admin
   log  admin
 
+Google Test
+  [Documentation]  google test
+  [Tags]  internet
+  Open Browser  https://www.google.com/  chrome
+  Maximize Browser Window
+
+  Submit Form
+  Close Browser
+
 
 
 *** Keywords ***
+Input Search Data
+    Input
 
 
